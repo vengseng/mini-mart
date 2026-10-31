@@ -1,0 +1,1550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fashion Store</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="cloth.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <div class="logo">
+        <h1>FASHION</h1>
+        <span>STYLE STORE</span>
+    </div>
+
+    <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#categories">Categories</a>
+        <a href="#about">About</a>
+    </nav>
+
+    <div class="header-icons">
+
+        <button id="searchBtn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+
+        <button id="cartBtn" class="cart-button">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="cartCount">0</span>
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- ================= SEARCH ================= -->
+
+<div class="search-box" id="searchBox">
+
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Search clothes...">
+    
+    <button id="closeSearch">
+        <i class="fa-solid fa-xmark"></i>
+    </button>
+
+</div>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <p class="hero-label">NEW COLLECTION 2026</p>
+
+        <h2>
+            Find Your
+            <span>Perfect Style</span>
+        </h2>
+
+        <p class="hero-text">
+            Discover modern fashion designed for
+            your everyday style.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#shop" class="btn">
+                Shop Now
+            </a>
+
+            <a href="#categories" class="btn secondary">
+                View Categories
+            </a>
+
+        </div>
+        
+    </div>
+
+</section>
+
+
+<!-- ================= CATEGORIES ================= -->
+
+<section class="categories-section" id="categories">
+
+    <div class="section-title">
+
+        <p>SHOP BY</p>
+
+        <h2>Categories</h2>
+
+    </div>
+
+    <div class="categories">
+
+        <button
+            class="category-btn active"
+            data-category="All">
+            <i class="fa-solid fa-border-all"></i>
+            All
+        </button>
+
+        <button
+            class="category-btn"
+            data-category="Dresses">
+            👗 Dresses
+        </button>
+
+        <button
+            class="category-btn"
+            data-category="T-Shirts">
+            👕 T-Shirts
+        </button>
+
+        <button
+            class="category-btn"
+            data-category="Jeans">
+            👖 Jeans
+        </button>
+
+        <button
+            class="category-btn"
+            data-category="Jackets">
+            🧥 Jackets
+        </button>
+
+        <button
+            class="category-btn"
+            data-category="Coats">
+            🧶 Coats
+        </button>
+
+        <button
+            class="category-btn"
+            data-category="Shoes">
+            👟 Shoes
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SHOP ================= -->
+
+<section class="shop" id="shop">
+
+    <div class="section-title">
+
+        <p>OUR COLLECTION</p>
+
+        <h2>Latest Products</h2>
+
+    </div>
+
+
+    <!--
+        =================================================
+        PRODUCTS ARE ADDED HERE
+        =================================================
+    -->
+
+    <div class="product-container" id="productContainer">
+
+
+        <!-- ================= PRODUCT 1 ================= -->
+
+        <div class="product-card"
+
+             data-name="Elegant Dress"
+             data-price="59"
+             data-category="Dresses"
+             data-image="images/Elegant Dress.jpg"
+             data-sizes="S,M,L,XL"
+             data-colors="Black,White,Red">
+
+            <div class="product-image">
+
+                <span class="sale-badge">
+                    Best Sale
+                </span>
+
+                <img
+                    src="images/Elegant Dress.jpg"
+                    alt="Elegant Dress">
+
+                <button class="add-cart-btn">
+                    <i class="fa-solid fa-cart-plus"></i>
+                    Add to Cart
+                </button>
+
+            </div>
+
+            <div class="product-info">
+                <h3>Elegant Dress</h3>
+                <p class="category">
+                    Dresses
+                </p>
+                <strong class="price">
+                    $59.00
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= PRODUCT 2 ================= -->
+
+        <div class="product-card"
+
+             data-name="Summer Dress"
+             data-price="69"
+             data-category="Dresses"
+             data-image="images/Summer Dress.jpg"
+             data-sizes="S,M,L,XL"
+             data-colors="Pink,White,Blue">
+
+            <div class="product-image">
+
+                <img
+                    src="images/Summer Dress.jpg"
+                    alt="Summer Dress">
+
+                <button class="add-cart-btn">
+                    <i class="fa-solid fa-cart-plus"></i>
+                    Add to Cart
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Summer Dress</h3>
+
+                <p class="category">
+                    Dresses
+                </p>
+
+                <strong class="price">
+                    $69.00
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= PRODUCT 3 ================= -->
+
+        <div class="product-card"
+
+             data-name="Basic T-Shirt"
+             data-price="25"
+             data-category="T-Shirts"
+             data-image="images/Basic T-Shirt.jpg"
+             data-sizes="S,M,L,XL"
+             data-colors="Black,White,Blue,Red">
+
+            <div class="product-image">
+
+                <span class="sale-badge">
+                    Best Sale
+                </span>
+
+                <img
+                    src="images/Basic T-Shirt.jpg"
+                    alt="Basic T-Shirt">
+
+                <button class="add-cart-btn">
+                    <i class="fa-solid fa-cart-plus"></i>
+                    Add to Cart
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Basic T-Shirt</h3>
+
+                <p class="category">
+                    T-Shirts
+                </p>
+
+                <strong class="price">
+                    $25.00
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= PRODUCT 4 ================= -->
+
+        <div class="product-card"
+
+             data-name="Oversize T-Shirt"
+             data-price="30"
+             data-category="T-Shirts"
+             data-image="images/Oversize T-Shirt.jpg"
+             data-sizes="M,L,XL"
+             data-colors="Black,White,Grey">
+
+            <div class="product-image">
+
+                <img
+                    src="images/Oversize T-Shirt.jpg"
+                    alt="Oversize T-Shirt">
+
+                <button class="add-cart-btn">
+                    <i class="fa-solid fa-cart-plus"></i>
+                    Add to Cart
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Oversize T-Shirt</h3>
+
+                <p class="category">
+                    T-Shirts
+                </p>
+
+                <strong class="price">
+                    $30.00
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= PRODUCT 5 ================= -->
+
+        <div class="product-card"
+
+             data-name="Blue Jeans"
+             data-price="49"
+             data-category="Jeans"
+             data-image="images/Blue Jeans.jpg"
+             data-sizes="28,30,32,34"
+             data-colors="Blue,Black">
+
+            <div class="product-image">
+
+                <span class="sale-badge">
+                    Best Sale
+                </span>
+
+                <img
+                    src="images/Blue Jeans.jpg"
+                    alt="Blue Jeans">
+
+                <button class="add-cart-btn">
+                    <i class="fa-solid fa-cart-plus"></i>
+                    Add to Cart
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Blue Jeans</h3>
+
+                <p class="category">
+                    Jeans
+                </p>
+
+                <strong class="price">
+                    $49.00
+                </strong>
+
+            </div>
+
+        </div>
+        <div class="product-card"
+
+             data-name="Denim Midi Skirt"
+             data-price="49"
+             data-category="Jeans"
+             data-image="images/Denim Midi Skirt.jpg"
+             data-sizes="28,30,32,34"
+             data-colors="Blue,Black">
+
+            <div class="product-image">
+               
+
+                <img
+                    src="images/Denim Midi Skirt.jpg"
+                    alt="Denim Midi Skirt">
+
+                <button class="add-cart-btn">
+                    <i class="fa-solid fa-cart-plus"></i>
+                    Add to Cart
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Denim Midi Skirt</h3>
+
+                <p class="category">
+                    Jeans
+                </p>
+
+                <strong class="price">
+                    $49.00
+                </strong>
+
+            </div>
+
+        </div>
+        <div class="product-card"
+
+             data-name="Camelwood cotton pant"
+             data-price="39"
+             data-category="Jeans"
+             data-image="images/Camelwood cotton pant.jpg"
+             data-sizes="28,30,32,34"
+             data-colors="Blue,Black">
+
+            <div class="product-image">
+
+                <span class="sale-badge">
+                    Best Sale
+                </span>
+
+                <img
+                    src="images/Camelwood cotton pant.jpg"
+                    alt="Camelwood cotton pant">
+
+                <button class="add-cart-btn">
+                    <i class="fa-solid fa-cart-plus"></i>
+                    Add to Cart
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Camelwood cotton pant</h3>
+
+                <p class="category">
+                    Jeans
+                </p>
+
+                <strong class="price">
+                    $39.00
+                </strong>
+
+            </div>
+
+        </div>
+
+        <div class="product-card"
+
+             data-name="Lightweight Stretch Pants"
+             data-price="49"
+             data-category="Jeans"
+             data-image="images/Lightweight Stretch Pants.jpg"
+             data-sizes="28,30,32,34"
+             data-colors="Blue,Black">
+
+            <div class="product-image">
+>
+
+                <img
+                    src="images/Lightweight Stretch Pants.jpg"
+                    alt="Lightweight Stretch Pants">
+
+                <button class="add-cart-btn">
+                    <i class="fa-solid fa-cart-plus"></i>
+                    Add to Cart
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Lightweight Stretch Pants</h3>
+
+                <p class="category">
+                    Jeans
+                </p>
+
+                <strong class="price">
+                    $49.00
+                </strong>
+
+            </div>
+
+        </div>
+
+        <div class="product-card"
+
+             data-name="Nike Challenger"
+             data-price="79"
+             data-category="Jeans"
+             data-image="images/Nike Challenger.jpg"
+             data-sizes="28,30,32,34"
+             data-colors="Blue,Black">
+
+            <div class="product-image">
+
+                <span class="sale-badge">
+                    Best Sale
+                </span>
+
+                <img
+                    src="images/Nike Challenger.jpg"
+                    alt="Nike Challenger">
+
+                <button class="add-cart-btn">
+                    <i class="fa-solid fa-cart-plus"></i>
+                    Add to Cart
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Nike Challenger</h3>
+
+                <p class="category">
+                    Jeans
+                </p>
+
+                <strong class="price">
+                    $79.00
+                </strong>
+
+            </div>
+
+        </div>
+
+        <div class="product-card"
+
+             data-name="Women's Pants & Leggings"
+             data-price="19"
+             data-category="Jeans"
+             data-image="images/Women's Pants & Leggings.jpg"
+             data-sizes="28,30,32,34"
+             data-colors="Blue,Black">
+
+            <div class="product-image">
+
+                <span class="sale-badge">
+                    Best Sale
+                </span>
+
+                <img
+                    src="images/Women's Pants & Leggings.jpg"
+                    alt="Women's Pants & Leggings">
+
+                <button class="add-cart-btn">
+                    <i class="fa-solid fa-cart-plus"></i>
+                    Add to Cart
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Women's Pants & Leggings</h3>
+
+                <p class="category">
+                    Jeans
+                </p>
+
+                <strong class="price">
+                    $19.00
+                </strong>
+
+            </div>
+
+        </div>
+
+        <div class="product-card"
+
+             data-name="Apparel Pants"
+             data-price="29"
+             data-category="Jeans"
+             data-image="images/Apparel Pants.jpg"
+             data-sizes="28,30,32,34"
+             data-colors="Blue,Black">
+
+            <div class="product-image">
+
+                <span class="sale-badge">
+                    Best Sale
+                </span>
+
+                <img
+                    src="images/Apparel Pants.jpg"
+                    alt="Apparel Pants">
+
+                <button class="add-cart-btn">
+                    <i class="fa-solid fa-cart-plus"></i>
+                    Add to Cart
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Apparel Pants</h3>
+
+                <p class="category">
+                    Jeans
+                </p>
+
+                <strong class="price">
+                    $29.00
+                </strong>
+
+            </div>
+
+        </div>
+
+        <div class="product-card"
+
+             data-name="Black Unleash Straight Baggy Pants"
+             data-price="59"
+             data-category="Jeans"
+             data-image="images/Black Unleash Straight Baggy Pants.jpg"
+             data-sizes="28,30,32,34"
+             data-colors="Blue,Black">
+
+            <div class="product-image">
+
+                <span class="sale-badge">
+                    Best Sale
+                </span>
+
+                <img
+                    src="images/Black Unleash Straight Baggy Pants.jpg"
+                    alt="Black Unleash Straight Baggy Pants">
+
+                <button class="add-cart-btn">
+                    <i class="fa-solid fa-cart-plus"></i>
+                    Add to Cart
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Black Unleash Straight Baggy Pants</h3>
+
+                <p class="category">
+                    Jeans
+                </p>
+
+                <strong class="price">
+                    $59.00
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= PRODUCT 6 ================= -->
+
+        <div class="product-card"
+
+             data-name="Denim Jacket"
+             data-price="79"
+             data-category="Jackets"
+             data-image="images/Denim Jacket.jpg"
+             data-sizes="S,M,L,XL"
+             data-colors="Blue,Black">
+
+            <div class="product-image">
+
+                <img
+                    src="images/Denim Jacket.jpg"
+                    alt="Denim Jacket">
+
+                <button class="add-cart-btn">
+                    <i class="fa-solid fa-cart-plus"></i>
+                    Add to Cart
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Denim Jacket</h3>
+
+                <p class="category">
+                    Jackets
+                </p>
+
+                <strong class="price">
+                    $79.00
+                </strong>
+
+            </div>
+
+        </div>
+
+        <div class="product-card"
+
+             data-name="Quilted Polyfiber Hoodie Jacket"
+             data-price="79"
+             data-category="Jackets"
+             data-image="images/Quilted Polyfiber Hoodie Jacket.jpg"
+             data-sizes="S,M,L,XL"
+             data-colors="Blue,Black">
+
+            <div class="product-image">
+
+                <img
+                    src="images/Quilted Polyfiber Hoodie Jacket.jpg"
+                    alt="Quilted Polyfiber Hoodie Jacket">
+
+                <button class="add-cart-btn">
+                    <i class="fa-solid fa-cart-plus"></i>
+                    Add to Cart
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Quilted Polyfiber Hoodie Jacket</h3>
+
+                <p class="category">
+                    Jackets
+                </p>
+
+                <strong class="price">
+                    $79.00
+                </strong>
+
+            </div>
+
+        </div>
+
+        <div class="product-card"
+
+             data-name="Suede Jacket"
+             data-price="79"
+             data-category="Jackets"
+             data-image="images/Suede Jacket.jpg"
+             data-sizes="S,M,L,XL"
+             data-colors="Blue,Black">
+
+            <div class="product-image">
+
+                <img
+                    src="images/Suede Jacket.jpg"
+                    alt="Suede Jacket">
+
+                <button class="add-cart-btn">
+                    <i class="fa-solid fa-cart-plus"></i>
+                    Add to Cart
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Suede Jacket</h3>
+
+                <p class="category">
+                    Jackets
+                </p>
+
+                <strong class="price">
+                    $79.00
+                </strong>
+
+            </div>
+
+        </div>
+
+        <div class="product-card"
+
+             data-name="Lambskin Jacket"
+             data-price="79"
+             data-category="Jackets"
+             data-image="images/Lambskin Jacket.jpg"
+             data-sizes="S,M,L,XL"
+             data-colors="Blue,Black">
+
+            <div class="product-image">
+
+                <img
+                    src="images/Lambskin Jacket.jpg"
+                    alt="Lambskin Jacket">
+
+                <button class="add-cart-btn">
+                    <i class="fa-solid fa-cart-plus"></i>
+                    Add to Cart
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Lambskin Jacket</h3>
+
+                <p class="category">
+                    Jackets
+                </p>
+
+                <strong class="price">
+                    $79.00
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= PRODUCT 7 ================= -->
+
+        <div class="product-card"
+
+             data-name="Winter Coat"
+             data-price="99"
+             data-category="Coats"
+             data-image="images/Winter Coat.jpg"
+             data-sizes="M,L,XL"
+             data-colors="Black,Brown,Grey">
+
+            <div class="product-image">
+
+                <img
+                    src="images/Winter Coat.jpg"
+                    alt="Winter Coat">
+
+                <button class="add-cart-btn">
+                    <i class="fa-solid fa-cart-plus"></i>
+                    Add to Cart
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Winter Coat</h3>
+
+                <p class="category">
+                    Coats
+                </p>
+
+                <strong class="price">
+                    $99.00
+                </strong>
+
+            </div>
+
+        </div>
+
+        <div class="product-card"
+
+             data-name="Peacoat Wool Pea Coat"
+             data-price="99"
+             data-category="Coats"
+             data-image="images/Peacoat Wool Pea Coat.jpg"
+             data-sizes="M,L,XL"
+             data-colors="Black,Brown,Grey">
+
+            <div class="product-image">
+
+                <span class="sale-badge">
+                    Best Sale
+                </span>
+
+                <img
+                    src="images/Peacoat Wool Pea Coat.jpg"
+                    alt="Peacoat Wool Pea Coat">
+
+                <button class="add-cart-btn">
+                    <i class="fa-solid fa-cart-plus"></i>
+                    Add to Cart
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Peacoat Wool Pea Coat</h3>
+
+                <p class="category">
+                    Coats
+                </p>
+
+                <strong class="price">
+                    $99.00
+                </strong>
+
+            </div>
+
+        </div>
+
+        <div class="product-card"
+
+             data-name="Wool Coats"
+             data-price="99"
+             data-category="Coats"
+             data-image="images/Wool Coats.jpg"
+             data-sizes="M,L,XL"
+             data-colors="Black,Brown,Grey">
+
+            <div class="product-image">
+
+                <img
+                    src="images/Wool Coats.jpg"
+                    alt="Wool Coats">
+
+                <button class="add-cart-btn">
+                    <i class="fa-solid fa-cart-plus"></i>
+                    Add to Cart
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Wool Coats</h3>
+
+                <p class="category">
+                    Coats
+                </p>
+
+                <strong class="price">
+                    $99.00
+                </strong>
+
+            </div>
+
+        </div>
+
+        <div class="product-card"
+
+             data-name="princess style coat"
+             data-price="99"
+             data-category="Coats"
+             data-image="images/princess style coat.jpg"
+             data-sizes="M,L,XL"
+             data-colors="Black,Brown,Grey">
+
+            <div class="product-image">
+
+                <span class="sale-badge">
+                    Best Sale
+                </span>
+
+                <img
+                    src="images/princess style coat.jpg"
+                    alt="princess style coat">
+
+                <button class="add-cart-btn">
+                    <i class="fa-solid fa-cart-plus"></i>
+                    Add to Cart
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>princess style coat</h3>
+
+                <p class="category">
+                    Coats
+                </p>
+
+                <strong class="price">
+                    $99.00
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= PRODUCT 8 ================= -->
+
+        <div class="product-card"
+
+             data-name="Classic Shoes"
+             data-price="89"
+             data-category="Shoes"
+             data-image="images/Classic Shoes.jpg"
+             data-sizes="39,40,41,42"
+             data-colors="Black,White,Brown">
+
+            <div class="product-image">
+
+                <img
+                    src="images/Classic Shoes.jpg"
+                    alt="Classic Shoes">
+
+                <button class="add-cart-btn">
+                    <i class="fa-solid fa-cart-plus"></i>
+                    Add to Cart
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Classic Shoes</h3>
+
+                <p class="category">
+                    Shoes
+                </p>
+
+                <strong class="price">
+                    $89.00
+                </strong>
+
+            </div>
+
+        </div>
+        <div class="product-card"
+
+             data-name="Htcenly Running Shoes"
+             data-price="49"
+             data-category="Shoes"
+             data-image="images/Htcenly Running Shoes.jpg"
+             data-sizes="39,40,41,42"
+             data-colors="Black,White,Brown">
+
+            <div class="product-image">
+
+                <img
+                    src="images/Htcenly Running Shoes.jpg"
+                    alt="Htcenly Running Shoes">
+
+                <button class="add-cart-btn">
+                    <i class="fa-solid fa-cart-plus"></i>
+                    Add to Cart
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Htcenly Running Shoes</h3>
+
+                <p class="category">
+                    Shoes
+                </p>
+
+                <strong class="price">
+                    $49.00
+                </strong>
+
+            </div>
+
+        </div>
+
+        <div class="product-card"
+
+             data-name="VESPER Blue Navy Men's Running Shoes"
+             data-price="49"
+             data-category="Shoes"
+             data-image="images/VESPER Blue Navy Men's Running Shoes.jpg"
+             data-sizes="39,40,41,42"
+             data-colors="Black,White,Brown">
+
+            <div class="product-image">
+
+                <img
+                    src="images/VESPER Blue Navy Men's Running Shoes.jpg"
+                    alt="VESPER Blue Navy Men's Running Shoes">
+
+                <button class="add-cart-btn">
+                    <i class="fa-solid fa-cart-plus"></i>
+                    Add to Cart
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Htcenly Running Shoes</h3>
+
+                <p class="category">
+                    Shoes
+                </p>
+
+                <strong class="price">
+                    $129.00
+                </strong>
+
+            </div>
+
+        </div>
+        <div class="product-card"
+
+             data-name="Women Black Synthetic Shoes"
+             data-price="49"
+             data-category="Shoes"
+             data-image="images/Women Black Synthetic Shoes.jpg"
+             data-sizes="39,40,41,42"
+             data-colors="Black,White,Brown">
+
+            <div class="product-image">
+
+                <img
+                    src="images/Women Black Synthetic Shoes.jpg"
+                    alt="Women Black Synthetic Shoes">
+
+                <button class="add-cart-btn">
+                    <i class="fa-solid fa-cart-plus"></i>
+                    Add to Cart
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Women Black Synthetic Shoes</h3>
+
+                <p class="category">
+                    Shoes
+                </p>
+
+                <strong class="price">
+                    $49.00
+                </strong>
+
+            </div>
+
+        </div>
+        <div class="product-card"
+
+             data-name="Custom Sneakers of all Kinds"
+             data-price="89"
+             data-category="Shoes"
+             data-image="images/Custom Sneakers of all Kinds.jpg"
+             data-sizes="39,40,41,42"
+             data-colors="Black,White,Brown">
+
+            <div class="product-image">
+
+                <img
+                    src="images/Custom Sneakers of all Kinds.jpg"
+                    alt="Custom Sneakers of all Kinds">
+
+                <button class="add-cart-btn">
+                    <i class="fa-solid fa-cart-plus"></i>
+                    Add to Cart
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Custom Sneakers of all Kinds</h3>
+
+                <p class="category">
+                    Shoes
+                </p>
+
+                <strong class="price">
+                    $89.00
+                </strong>
+
+            </div>
+
+        </div>
+        <div class="product-card"
+
+             data-name="Canvas shoes"
+             data-price="99"
+             data-category="Shoes"
+             data-image="images/Canvas shoes.jpg"
+             data-sizes="39,40,41,42"
+             data-colors="Black,White,Brown">
+
+            <div class="product-image">
+
+                <img
+                    src="images/Canvas shoes.jpg"
+                    alt="Canvas shoes ">
+
+                <button class="add-cart-btn">
+                    <i class="fa-solid fa-cart-plus"></i>
+                    Add to Cart
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Canvas shoes</h3>
+
+                <p class="category">
+                    Shoes
+                </p>
+
+                <strong class="price">
+                    $99.00
+                </strong>
+
+            </div>
+
+        </div>
+        <div class="product-card"
+
+             data-name=" Render"
+             data-price="39"
+             data-category="Shoes"
+             data-image="images/Render.jpg"
+             data-sizes="39,40,41,42"
+             data-colors="Black,White,Brown">
+
+            <div class="product-image">
+
+                <img
+                    src="images/Render.jpg"
+                    alt=" Render">
+
+                <button class="add-cart-btn">
+                    <i class="fa-solid fa-cart-plus"></i>
+                    Add to Cart
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3> Render</h3>
+
+                <p class="category">
+                    Shoes
+                </p>
+
+                <strong class="price">
+                    $39.00
+                </strong>
+
+            </div>
+
+        </div>
+        <div class="product-card"
+
+             data-name=" Elegantly"
+             data-price="39"
+             data-category="Shoes"
+             data-image="images/Elegantly.jpg"
+             data-sizes="39,40,41,42"
+             data-colors="Black,White,Brown">
+
+            <div class="product-image">
+
+                <img
+                    src="images/Elegantly.jpg"
+                    alt=" Elegantly">
+
+                <button class="add-cart-btn">
+                    <i class="fa-solid fa-cart-plus"></i>
+                    Add to Cart
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3> Elegantly</h3>
+
+                <p class="category">
+                    Shoes
+                </p>
+
+                <strong class="price">
+                    $39.00
+                </strong>
+
+            </div>
+
+        </div>
+        
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= SIZE + COLOR MODAL ================= -->
+
+<div class="modal-overlay" id="productModal">
+
+    <div class="product-modal">
+
+        <button
+            class="modal-close"
+            id="closeProductModal">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+
+        <div class="modal-product">
+
+            <div class="modal-image">
+
+                <img
+                    id="modalProductImage"
+                    src=""
+                    alt="Product">
+
+            </div>
+
+
+            <div class="modal-details">
+
+                <h2 id="modalProductName">
+                    Product
+                </h2>
+
+                <p
+                    class="modal-category"
+                    id="modalProductCategory">
+                </p>
+
+                <h3
+                    class="modal-price"
+                    id="modalProductPrice">
+                    $0.00
+                </h3>
+
+
+                <!-- SIZE -->
+
+                <div class="option-section">
+
+                    <h4>
+                        Select Size
+                    </h4>
+
+                    <div
+                        class="size-options"
+                        id="sizeOptions">
+                    </div>
+
+                </div>
+
+
+                <!-- COLOR -->
+
+                <div class="option-section">
+
+                    <h4>
+                        Select Color
+                    </h4>
+
+                    <div
+                        class="color-options"
+                        id="colorOptions">
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="confirm-add-btn"
+                    id="confirmAddBtn">
+
+                    <i class="fa-solid fa-cart-plus"></i>
+
+                    Add to Cart
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= CART ================= -->
+
+<div class="cart-overlay" id="cartOverlay">
+
+    <div class="cart">
+
+        <div class="cart-header">
+
+            <h2>
+                <i class="fa-solid fa-cart-shopping"></i>
+                Your Cart
+            </h2>
+
+            <button id="closeCart">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+        <div
+            class="cart-items"
+            id="cartItems">
+        </div>
+
+
+        <div class="cart-footer">
+
+            <div class="cart-total">
+
+                <span>
+                    Total:
+                </span>
+
+                <strong id="cartTotal">
+                    $0.00
+                </strong>
+
+            </div>
+
+            <button
+                class="checkout-btn"
+                id="checkoutBtn">
+
+                Checkout
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= CHECKOUT ================= -->
+
+<div
+    class="modal-overlay"
+    id="checkoutModal">
+
+    <div class="checkout-modal">
+
+        <button
+            class="modal-close"
+            id="closeCheckout">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+
+        <div class="success-icon">
+
+            <i class="fa-solid fa-check"></i>
+
+        </div>
+
+
+        <h2>
+            Order Confirmed!
+        </h2>
+
+        <p>
+            Thank you for shopping with us.
+        </p>
+
+
+        <div
+            id="checkoutSummary"
+            class="checkout-summary">
+        </div>
+
+
+        <button
+            class="continue-btn"
+            id="continueShopping">
+
+            Continue Shopping
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about" id="about">
+
+    <div>
+        <p>
+            ABOUT US
+        </p>
+        <h2>
+            Fashion Made Simple
+        </h2>
+        <p>
+            We bring you modern and comfortable
+            clothing for every occasion.
+            Discover your style with our
+            latest collection.
+        </p>
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+    <h2>
+        FASHION
+    </h2>
+    <p>
+        © 2026 Fashion Store.
+        All Rights Reserved.
+    </p>
+</footer>
+<script src="script.js"></script>
+
+</body>
+</html>

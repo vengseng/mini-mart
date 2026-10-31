@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Green Basket Mini Mart</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Green Basket"><span class="brand-mark">🛒</span><span>Green Basket<small>MINI MART</small></span></a>
+    <div class="header-tools">
+      <label class="top-search"><span>⌕</span><input id="globalSearch" type="search" placeholder="Search products..." aria-label="Search products"></label>
+      <button class="icon-button cart-top" id="cartOpen" aria-label="Open cart">🛍️ <span id="cartBadge">0</span></button>
+      <button class="mobile-menu-button" id="mobileMenuToggle" aria-label="Open navigation" aria-expanded="false">☰</button><button class="theme-toggle" id="themeToggle" aria-label="Switch to dark mode" title="Switch theme">🌙</button>
+    </div>
+  </header>
+
+  <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+    <button class="nav-tab active" data-view="home"><span>⌂</span> Home</button>
+    <button class="nav-tab" data-view="products"><span>▦</span> Products</button>
+    <button class="nav-tab" data-view="favorites"><span>♡</span> Favorites <b id="favoritesBadge">0</b></button>
+    <button class="nav-tab" data-view="about"><span>ⓘ</span> About us</button>
+    <button class="nav-tab admin-only" data-view="clients"><span>♙</span> Clients</button>
+    <button class="nav-tab admin-only" data-view="orders"><span>▤</span> Orders <b id="ordersBadge">0</b></button>
+    <button class="nav-tab admin-only" data-view="history"><span>◷</span> History</button>
+    <button class="nav-tab admin-only" id="manageNavButton" type="button"><span>⚙</span> Manage</button>
+  </nav>
+
+  <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+  <main>
+    <section class="view active-view" id="view-home">
+      <section class="welcome-hero">
+        <div class="hero-copy">
+          <span class="eyebrow">YOUR NEIGHBORHOOD MINI MART</span>
+          <h1>Welcome to <em>Green Basket</em></h1>
+          <p class="hero-lead">Fresh choices, fair prices, and everyday essentials—all in one friendly neighborhood shop.</p>
+          <p class="hero-desc">From colorful fruit to pantry basics and little treats, we make everyday shopping simple, welcoming, and convenient.</p>
+          <button class="primary-button" data-go="products">Explore products <span>→</span></button>
+          <div class="hero-points"><span>✓ Everyday essentials</span><span>✓ Simple checkout</span><span>✓ Clear receipts</span></div>
+        </div>
+        <div class="hero-visual"><div class="hero-orb"></div><div class="hero-bag">🛍️</div><div class="float-label label-a">🥤 Cool drinks</div><div class="float-label label-b">🍎 Daily favorites</div><div class="hero-sticker">A little shop,<br>a lot to love.</div></div>
+      </section>
+      <section class="promo-strip" aria-label="Fresh deals"><div class="promo-art">🍊 🥬 🍓</div><div class="promo-copy"><span class="eyebrow">FRESH THIS WEEK</span><h2>Good food, good mood.</h2><p>Discover colorful fruit, fresh vegetables and everyday essentials picked for your basket.</p></div><button class="primary-button" data-go="products">Explore fresh picks →</button></section>
+      <section class="loyalty-card"><div class="loyalty-icon">🌟</div><div class="loyalty-copy"><span class="eyebrow">GREEN BASKET REWARDS</span><h2>Your shopping, your rewards</h2><p>Enter your customer name to check points, claim a reward, and use it at checkout.</p><div class="reward-account"><input id="rewardCustomerName" type="text" maxlength="70" placeholder="Your customer name" aria-label="Your customer name"><button class="secondary-button" id="loadRewardAccount" type="button">Load points</button></div></div><div class="loyalty-points"><strong id="homeRewardPoints">120</strong><span id="rewardPointsLabel">DEMO POINTS</span></div></section>
+      <section class="rewards-showcase section-block"><div class="section-title"><div><span class="eyebrow">A LITTLE THANK-YOU</span><h2>Claim your reward</h2><p>Earn 1 point for every whole $1 paid. Choose one reward, then use it on your next demo checkout.</p></div></div><div class="reward-grid"><article class="reward-tile"><span>🥤</span><div><strong>Free drink</strong><p>100 points</p><small>Up to $1.50 off one drink in your basket</small></div><button class="claim-reward-button" data-claim-reward="drink" type="button">Claim</button></article><article class="reward-tile"><span>💵</span><div><strong>$1 off</strong><p>50 points</p><small>Discount on your order</small></div><button class="claim-reward-button" data-claim-reward="one" type="button">Claim</button></article><article class="reward-tile"><span>🎁</span><div><strong>$5 off</strong><p>200 points</p><small>Discount on your order</small></div><button class="claim-reward-button" data-claim-reward="five" type="button">Claim</button></article></div><div class="active-reward-panel" id="activeRewardPanel" aria-live="polite">Load your points above to claim a reward.</div><p class="reward-disclaimer">Demo rewards only. Points and claims are saved in this browser and are not real currency or payments.</p></section>
+      <section class="stats-grid customer-stats">
+        <article class="stat-card"><span class="stat-icon green">▦</span><div><small>Products to explore</small><strong id="statProducts">48</strong></div></article>
+        <article class="stat-card"><span class="stat-icon yellow">♡</span><div><small>Your favorites</small><strong id="statFavorites">0</strong></div></article>
+      </section>
+      <section class="home-products section-block">
+        <div class="section-title"><div><span class="eyebrow">PICKS FOR YOU</span><h2>Popular products</h2><p>Explore everyday essentials and fresh favorites.</p></div><button class="text-button" data-go="products">View all products →</button></div>
+        <div class="product-grid" id="featuredGrid"></div>
+      </section>
+    </section>
+
+    <section class="view" id="view-products">
+      <div class="page-heading"><div><span class="eyebrow">BROWSE THE STORE</span><h1>Products</h1><p>Find your favorites and add them to your basket.</p></div></div>
+      <div class="product-tools"><div class="category-pills" id="categoryPills"><button class="category-pill active" data-category="All">All items</button><button class="category-pill" data-category="Drinks">Drinks</button><button class="category-pill" data-category="Snacks">Snacks</button><button class="category-pill" data-category="Food">Food</button><button class="category-pill" data-category="Household">Household</button></div><span id="productCount" class="muted"></span></div>
+      <div class="product-grid" id="productGrid"></div><p id="noProducts" class="empty-state hidden">No products found. Try a different search.</p>
+    </section>
+
+    <section class="view" id="view-favorites"><div class="page-heading"><div><span class="eyebrow">SAVED FOR LATER</span><h1>Your favorites</h1><p>Keep the products you love together in one place.</p></div><button class="secondary-button" data-go="products">Browse products</button></div><div class="product-grid" id="favoritesGrid"></div><p id="noFavorites" class="empty-state">Tap the heart on a product to save it here.</p></section>
+
+
+    <section class="view" id="view-about">
+      <div class="page-heading"><div><span class="eyebrow">OUR STORY</span><h1>A little shop, a lot to love.</h1><p>Get to know the idea behind Green Basket Mini Mart.</p></div></div>
+      <section class="about-hero"><div class="about-art" aria-hidden="true">🌿🧺🍎</div><div><span class="eyebrow">HELLO FROM GREEN BASKET</span><h2>Everyday shopping, made friendlier.</h2><p>Green Basket Mini Mart began with a simple idea: a neighborhood shop should make daily life a little easier. We bring together fresh fruit and vegetables, pantry staples, snacks, drinks, and home essentials in one welcoming place.</p></div></section>
+      <section class="about-grid"><article class="about-card"><span>💚</span><h3>A friendly welcome</h3><p>We believe good service starts with kindness. Whether you are picking up one item or filling a basket, we want shopping to feel easy and pleasant.</p></article><article class="about-card"><span>🍊</span><h3>Everyday essentials</h3><p>From fresh produce to the little things a home needs, our goal is to help you find useful products without making shopping complicated.</p></article><article class="about-card"><span>🌱</span><h3>Growing with our community</h3><p>Every visit and every suggestion helps us improve. We hope Green Basket becomes a trusted stop for families, students, workers, and neighbors.</p></article></section>
+      <section class="owner-note"><div class="owner-avatar">👋</div><div><span class="eyebrow">A NOTE FROM THE OWNER</span><h2>Thank you for being here.</h2><p>“I imagined Green Basket as the kind of mini mart I would love to visit myself: friendly, organized, and full of everyday essentials. This shop is built around a simple promise—to treat every customer with care and keep making the shopping experience better.”</p><small>— The Green Basket owner</small></div></section>
+      <section class="about-cta"><div><h2>Ready to fill your basket?</h2><p>Explore our products and discover your new favorites.</p></div><button class="primary-button" data-go="products">Shop products →</button></section>
+    </section>
+
+    <section class="view" id="view-clients">
+      <div class="page-heading"><div><span class="eyebrow">CUSTOMER RELATIONSHIPS</span><h1>Clients</h1><p>Keep track of customers who have checked out or add a client manually.</p></div><button class="primary-button" id="addClientButton">＋ Add client</button></div>
+      <div class="table-card"><div class="table-top"><h3>Client directory</h3><span id="clientCount" class="muted">0 clients</span></div><div class="responsive-table"><table><thead><tr><th>Client</th><th>Email / Contact</th><th>Orders</th><th>Total spent</th><th>Action</th></tr></thead><tbody id="clientTable"></tbody></table></div><p id="noClients" class="empty-state">No clients yet. Client details are added at checkout.</p></div>
+    </section>
+
+    <section class="view" id="view-orders">
+      <div class="page-heading"><div><span class="eyebrow">CURRENT STORE ACTIVITY</span><h1>Orders</h1><p>Review orders and update their status.</p></div><button class="secondary-button" id="ordersRefresh">↻ Refresh list</button></div>
+      <div class="table-card"><div class="table-top"><h3>Order management</h3><span class="muted">Demo orders saved in this browser</span></div><div class="responsive-table"><table><thead><tr><th>Order ID</th><th>Client</th><th>Date</th><th>Items</th><th>Total</th><th>Status</th><th>Action</th></tr></thead><tbody id="ordersTable"></tbody></table></div><p id="noOrders" class="empty-state">No orders yet. Add products to your cart and check out to create an order.</p></div>
+    </section>
+
+    <section class="view" id="view-history">
+      <div class="page-heading"><div><span class="eyebrow">YOUR STORE RECORDS</span><h1>History</h1><p>Past orders and their receipts are collected here.</p></div><button class="secondary-button" id="exportHistory">⇩ Export CSV</button></div>
+      <div class="table-card"><div class="table-top"><h3>Order history</h3><span id="historyCount" class="muted">0 records</span></div><div class="responsive-table"><table><thead><tr><th>Order ID</th><th>Client</th><th>Date</th><th>Items</th><th>Total</th><th>Status</th><th>Receipt</th></tr></thead><tbody id="historyTable"></tbody></table></div><p id="noHistory" class="empty-state">Your completed orders will appear here.</p></div>
+    </section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#home">🛒 Green Basket</a><p>Fresh choices, fair prices, and everyday essentials—served with a friendly neighborhood spirit.</p><button class="text-button" data-go="about">Read our story →</button><small>Customer shopping demo • Favorites and rewards are saved in this browser</small><div class="footer-admin"><button class="text-button" id="adminLoginButton" type="button">Store staff sign in</button><button class="text-button hidden" id="adminLogoutButton" type="button">Return to customer store</button></div></footer>
+
+  <div class="overlay hidden" id="cartModal"><section class="dialog" role="dialog" aria-modal="true" aria-labelledby="cartTitle"><button class="close-btn" data-close="cartModal">×</button><span class="eyebrow">YOUR BASKET</span><h2 id="cartTitle">Shopping cart</h2><div id="cartItems"></div><div class="reward-cart-line hidden" id="cartRewardLine"><span id="cartRewardLabel">Reward</span><strong id="cartRewardDiscount">−$0.00</strong></div><div class="total-line"><span>Estimated total</span><strong id="cartTotal">$0.00</strong></div><p class="small-note">Prices are shown in USD. Demo checkout only; no real payment is taken.</p><form id="checkoutForm" class="checkout-form"><h3>Checkout details</h3><label>Client name<input id="checkoutName" required placeholder="Enter customer name"></label><label>Email or contact (optional)<input id="checkoutContact" placeholder="Email or phone"></label><button class="primary-button full-width" type="submit">Place order & create receipt</button></form><p class="small-note">Demo checkout only. No real payment is taken. You earn 1 reward point per whole $1 spent.</p></section></div>
+
+  <div class="overlay hidden" id="receiptModal"><section class="dialog receipt-dialog" role="dialog" aria-modal="true" aria-labelledby="receiptHeading"><button class="close-btn" data-close="receiptModal">×</button><div class="receipt-brand"><span class="receipt-logo">🌿</span><span>GREEN BASKET<small>MINI MART · FRESH EVERY DAY</small></span></div><div class="receipt-title-wrap"><h2 id="receiptHeading">Order receipt</h2><span class="receipt-paid">ORDER CONFIRMED</span></div><p id="receiptMeta" class="muted"></p><p id="receiptClient" class="receipt-client"></p><div class="receipt-items-heading"><span>ITEM</span><span>AMOUNT</span></div><div id="receiptLines"></div><div class="reward-cart-line hidden" id="receiptDiscountWrap"><span id="receiptDiscountLabel">Reward discount</span><strong id="receiptDiscount">−$0.00</strong></div><div class="total-line"><span>Total paid</span><strong id="receiptTotal">$0.00</strong></div><div class="receipt-footer-art" aria-hidden="true">🍎 🍊 🥬 🥖</div><p class="thank-you">Thank you for shopping with us! 💚<small>Fresh choices, happy homes.</small></p><button class="primary-button full-width" id="printReceipt">Print receipt</button></section></div>
+
+  <div class="overlay hidden" id="clientModal"><section class="dialog" role="dialog" aria-modal="true" aria-labelledby="clientModalTitle"><button class="close-btn" data-close="clientModal">×</button><span class="eyebrow">CLIENT DIRECTORY</span><h2 id="clientModalTitle">Add a client</h2><form id="clientForm" class="checkout-form"><label>Full name<input id="newClientName" required placeholder="Client name"></label><label>Email or contact<input id="newClientContact" placeholder="Email or phone"></label><button class="primary-button full-width" type="submit">Save client</button></form></section></div>
+
+  <div class="overlay hidden" id="adminPinModal" aria-hidden="true"><section class="dialog" role="dialog" aria-modal="true" aria-labelledby="adminTitle"><button class="close-btn" data-close="adminPinModal">×</button><span class="eyebrow">STAFF AREA</span><h2 id="adminTitle">Store staff sign in</h2><p class="muted">Staff can see prices, customer records, orders and sales.</p><form id="pinForm" class="checkout-form"><label>Admin PIN<input id="adminPin" type="password" required placeholder="Demo PIN: 1234"></label><p class="form-error" id="pinError"></p><button class="primary-button full-width" type="submit">Open manager</button></form></section></div>
+
+  <div class="overlay hidden" id="productModal"><section class="dialog wide-dialog" role="dialog" aria-modal="true" aria-labelledby="productModalTitle"><button class="close-btn" data-close="productModal">×</button><span class="eyebrow">STORE MANAGEMENT</span><h2 id="productModalTitle">Manage products</h2><form id="productForm" class="checkout-form"><input type="hidden" id="editProductId"><div class="form-grid"><label>Product name<input id="productName" required maxlength="70" placeholder="e.g. Potato chips"></label><label>Price ($)<input id="productPrice" type="number" min="0.01" step="0.01" required placeholder="1.50"></label><label>Category<select id="productCategory"><option>Drinks</option><option>Snacks</option><option>Food</option><option>Household</option><option>Fruits</option><option>Vegetables</option><option>Bakery</option><option>Dairy & Eggs</option><option>Frozen Foods</option><option>Pantry</option><option>Cleaning</option><option>Personal Care</option></select></label><label>Image URL or local path<input id="productImage" placeholder="images/chips.jpg"></label></div><div class="form-actions"><button class="primary-button" id="saveProductButton" type="submit">Add product</button><button class="secondary-button hidden" id="cancelProductEdit" type="button">Cancel edit</button></div></form><div class="table-top"><h3>Products</h3><span id="manageProductCount" class="muted"></span></div><div id="manageProductList" class="manage-list"></div><button class="secondary-button full-width" id="resetProducts">Reset sample products</button><p class="small-note">PIN is a demo-only front-end check, not secure authentication.</p></section></div>
+  <div class="toast hidden" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>

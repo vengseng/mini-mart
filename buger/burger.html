@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Naturel - Fresh & Organic</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="burger.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+        <span>◉</span> naturel
+    </div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#delivery">Delivery</a>
+        <a href="#about">About Us</a>
+    </nav>
+
+    <div class="nav-right">
+
+        <button class="search-btn" onclick="openSearch()">
+            🔍
+        </button>
+
+        <button class="cart-btn" onclick="showCart()">
+            Cart <span id="cartCount">0</span>
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- ================= SEARCH ================= -->
+
+<div class="search-box" id="searchBox">
+
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Search fruits, nuts, juice..."
+        onkeyup="searchProducts()"
+    >
+
+    <button onclick="closeSearch()">✕</button>
+
+</div>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <p class="small-title">
+            SMOOTH. FRESH & NATURAL
+        </p>
+
+        <h1>
+            Goodness<br>
+            <span>From Nature</span>
+        </h1>
+
+        <p class="hero-description">
+            Discover fresh fruits, healthy nuts and delicious
+            natural drinks carefully selected for your everyday life.
+        </p>
+
+        <button class="primary-btn" onclick="scrollToProducts()">
+            Shop Now →
+        </button>
+
+        <p class="rating">
+            ★★★★★ <span>4.9 / 5 customer rating</span>
+        </p>
+
+    </div>
+
+
+    <div class="hero-image">
+
+    <button class="slider-btn prev" onclick="changeSlide(-1)">
+        ❮
+    </button>
+
+    <img
+        id="heroSlider"
+        src="https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?auto=format&fit=crop&w=900&q=90"
+        alt="Fresh fruit"
+    >
+
+    <button class="slider-btn next" onclick="changeSlide(1)">
+        ❯
+    </button>
+
+    <div class="slider-dots">
+        <span class="dot active" onclick="goToSlide(0)"></span>
+        <span class="dot" onclick="goToSlide(1)"></span>
+        <span class="dot" onclick="goToSlide(2)"></span>
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- ================= FEATURES ================= -->
+
+<section class="features">
+
+    <div class="feature">
+
+        <div class="feature-icon">🌱</div>
+
+        <div>
+            <h3>100% Natural</h3>
+            <p>Fresh ingredients</p>
+        </div>
+
+    </div>
+
+
+    <div class="feature">
+
+        <div class="feature-icon">🚚</div>
+
+        <div>
+            <h3>Fast Delivery</h3>
+            <p>Fresh to your door</p>
+        </div>
+
+    </div>
+
+
+    <div class="feature">
+
+        <div class="feature-icon">♻️</div>
+
+        <div>
+            <h3>Eco Friendly</h3>
+            <p>Better for nature</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PRODUCTS ================= -->
+
+<section class="products-section" id="products">
+
+    <div class="section-heading">
+
+        <div>
+            <p class="section-label">OUR COLLECTION</p>
+
+            <h2>
+                Fresh <span>Favorites</span>
+            </h2>
+        </div>
+
+        <button class="view-btn" onclick="showAllProducts()">
+            View All →
+        </button>
+
+    </div>
+
+
+    <div class="product-grid" id="productGrid">
+
+        <!-- PRODUCT 1 -->
+
+        <article class="product-card" data-name="red fruits berries">
+
+            <div class="product-image">
+
+                <span class="badge">Fresh</span>
+
+                <img
+                    src="https://images.unsplash.com/photo-1498557850523-fd3d118b962e?auto=format&fit=crop&w=600&q=85"
+                    alt="Fresh berries"
+                >
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Berry Harvest</h3>
+
+                <p>
+                    Fresh mixed berries
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>$12.00</strong>
+
+                    <button onclick="addToCart('Berry Harvest', 12)">
+                        + Add
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PRODUCT 2 -->
+
+        <article class="product-card" data-name="almond nuts">
+
+            <div class="product-image">
+
+                <span class="badge">Organic</span>
+
+                <img
+                    src="https://images.unsplash.com/photo-1508061253366-f7da158b6dca?auto=format&fit=crop&w=600&q=85"
+                    alt="Almonds"
+                >
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Almonds</h3>
+
+                <p>
+                    Premium roasted almonds
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>$13.25</strong>
+
+                    <button onclick="addToCart('Almonds', 13.25)">
+                        + Add
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PRODUCT 3 -->
+
+        <article class="product-card" data-name="fruit bread">
+
+            <div class="product-image">
+
+                <span class="badge">Popular</span>
+
+                <img
+                    src="https://images.unsplash.com/photo-1608198093002-ad4e005484ec?auto=format&fit=crop&w=600&q=85"
+                    alt="Fresh bread"
+                >
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Fruit Bread</h3>
+
+                <p>
+                    Handmade fresh bread
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>$6.95</strong>
+
+                    <button onclick="addToCart('Fruit Bread', 6.95)">
+                        + Add
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- ================= STORY ================= -->
+
+<section class="story" id="about">
+
+    <div class="story-image">
+
+        <img
+            src="https://images.unsplash.com/photo-1608797178974-15b35a64ede9?auto=format&fit=crop&w=800&q=85"
+            alt="Fresh nuts"
+        >
+
+    </div>
+
+
+    <div class="story-content">
+
+        <p class="section-label">
+            NATURAL GOODNESS
+        </p>
+
+        <h2>
+            Healthy choices,<br>
+            <span>better everyday.</span>
+        </h2>
+
+        <p>
+            We believe good food should be simple, fresh and
+            full of natural flavor. Our products are carefully
+            selected from trusted growers and producers.
+        </p>
+
+        <div class="story-list">
+
+            <div>
+                <span>✓</span>
+                Fresh ingredients
+            </div>
+
+            <div>
+                <span>✓</span>
+                Carefully selected
+            </div>
+
+            <div>
+                <span>✓</span>
+                Sustainable packaging
+            </div>
+
+        </div>
+
+        <button class="primary-btn">
+            Our Story →
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= JUICE ================= -->
+
+<section class="juice-section" id="delivery">
+
+    <div class="juice-content">
+
+        <p class="section-label">
+            FRESH EVERY MORNING
+        </p>
+
+        <h2>
+            Smooth &<br>
+            <span>Bright</span>
+        </h2>
+
+        <p>
+            Delicious cold-pressed juices made with fresh
+            fruits and vegetables.
+        </p>
+
+        <button class="primary-btn" onclick="addToCart('Fresh Juice', 8)">
+            Order Juice →
+        </button>
+
+    </div>
+
+
+    <div class="juice-bottles">
+
+        <div class="bottle orange">
+            <div class="cap"></div>
+            <div class="label">ORANGE</div>
+        </div>
+
+        <div class="bottle yellow">
+            <div class="cap"></div>
+            <div class="label">MANGO</div>
+        </div>
+
+        <div class="bottle green">
+            <div class="cap"></div>
+            <div class="label">GREEN</div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= NEWSLETTER ================= -->
+
+<section class="newsletter">
+
+    <p class="section-label">
+        STAY NATURAL
+    </p>
+
+    <h2>
+        Fresh ideas, <span>straight to you.</span>
+    </h2>
+
+    <p>
+        Get recipes, healthy tips and special offers.
+    </p>
+
+    <form onsubmit="subscribe(event)">
+
+        <input
+            type="email"
+            id="email"
+            placeholder="Your email address"
+            required
+        >
+
+        <button type="submit">
+            Subscribe
+        </button>
+
+    </form>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-logo">
+        ◉ naturel
+    </div>
+
+    <p>
+        Fresh food. Simple living. Better nature.
+    </p>
+
+    <div class="socials">
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">Pinterest</a>
+    </div>
+
+    <p class="copyright">
+        © 2026 Naturel. All rights reserved.
+    </p>
+
+</footer>
+
+
+<!-- ================= CART MODAL ================= -->
+
+<div class="cart-modal" id="cartModal">
+
+    <div class="cart-window">
+
+        <button class="close-cart" onclick="closeCart()">
+            ✕
+        </button>
+
+        <h2>Your Cart</h2>
+
+        <div id="cartItems">
+            <p class="empty-cart">
+                Your cart is empty.
+            </p>
+        </div>
+
+        <div class="cart-total">
+
+            <span>Total</span>
+
+            <strong id="cartTotal">
+                $0.00
+            </strong>
+
+        </div>
+
+        <button class="checkout-btn" onclick="checkout()">
+            Checkout →
+        </button>
+
+    </div>
+
+</div>
+<!-- =========================
+     RECEIPT
+========================= -->
+
+<div class="receipt-modal" id="receiptModal">
+
+    <div class="receipt">
+
+        <button class="receipt-close" onclick="closeReceipt()">
+            ✕
+        </button>
+
+        <div class="receipt-header">
+            <h2>NATUREL</h2>
+            <p>Fresh & Natural Food</p>
+            <small id="receiptDate"></small>
+        </div>
+
+        <hr>
+
+        <h3>ORDER RECEIPT</h3>
+
+        <div id="receiptItems"></div>
+
+        <hr>
+
+        <div class="receipt-row">
+            <span>Subtotal</span>
+            <strong id="receiptSubtotal">$0.00</strong>
+        </div>
+
+        <div class="receipt-row">
+            <span>Delivery</span>
+            <strong>$2.00</strong>
+        </div>
+
+        <div class="receipt-row total">
+            <span>TOTAL</span>
+            <strong id="receiptTotal">$0.00</strong>
+        </div>
+
+        <p class="thank-you">
+            Thank you for shopping with Naturel ❤️
+        </p>
+
+        <button class="print-btn" onclick="printReceipt()">
+            🖨 Print Receipt
+        </button>
+
+    </div>
+
+</div>
+
+
+<script src="burger.js"></script>
+
+</body>
+</html>
